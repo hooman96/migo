@@ -7,4 +7,8 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'migoapp.views.index'),
+    url(r'^index', 'migoapp.views.index'),
+    url(r'^search/(?P<searchterm>\w+)/', 'migoapp.views.spec'), 
+
 )
